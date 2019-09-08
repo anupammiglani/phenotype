@@ -42,7 +42,7 @@ mode:'horizontal',
 speed: 2000,
 });
 function customizeCarousel(){
-var halfscreen=($(window).height())/2;
+var halfscreen=(($(window).height())-($('.carouselWrapper').offset().top)-10);
 console.log(halfscreen);
 $('.carouselWrapper .bx-viewport').css('height',halfscreen);
 $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);

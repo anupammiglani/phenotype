@@ -780,6 +780,8 @@ float:none;
 }
 #topNav nav li{
 float:none;
+text-align:right;
+margin-right:0px;
 }
 .bx-pager.bx-default-pager{
 display:none;

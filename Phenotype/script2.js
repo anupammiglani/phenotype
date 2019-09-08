@@ -14,11 +14,11 @@ $('.menuicon').on('click',function(){
 console.log("data 1");
 if($('.main-nav ul').css('display')=='none'){
 console.log("data 1");
-$('.main-nav ul').show(1500);
+$('.main-nav ul').slideDown(1500);
 }
 else{
 console.log("data 2");
-$('.main-nav ul').hide(1500);
+$('.main-nav ul').slideUp(1500);
 }
 });
 $(".scroll_text").on('click',function(){
