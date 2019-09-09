@@ -52,18 +52,12 @@ $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);
   window.addEventListener("resize", customizeCarousel);
   window.addEventListener("orientationChange", customizeCarousel);
 customizeCarousel();
-function fixImages(){
- var hei=$(window).height()/2;
- 
-}
-window.addEventListener("resize", fixImages);
-window.addEventListener("orientationChange", fixImages);
-fixImages();
+
 $(window).scroll(function(e){
 	if(onTop)
 	{
 		console.log("from top");
-		var destination =$('#page').offset().top+50;
+		var destination =$('#page').offset().top+48;
   //jQuery UI needed for animate function
 		$("html,body").animate({scrollTop: destination}, 600);
 		onTop=false;
@@ -73,8 +67,14 @@ $(window).scroll(function(e){
 		 onTop=true;
 	}
 });     
-
-
-
-
-})
+function images(){
+	var height=$(window).height();
+	var margin=$("#projectThumbs a.project").css("margin-top");
+	var marginInt=parseFloat(margin);
+	height=height-marginInt-5;	
+	$('#projectThumbs .project').height(height*(.5));
+}
+images();
+ window.addEventListener("resize", customizeCarousel);
+  window.addEventListener("orientationChange", customizeCarousel);
+});
