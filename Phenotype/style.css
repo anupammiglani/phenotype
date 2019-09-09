@@ -565,6 +565,7 @@ h1 {
 }
 
 #projectThumbs .project .project-title {
+	width:100%;
     font-family: Georgia,serif;
     font-weight: normal;
     font-style: italic;
@@ -678,6 +679,7 @@ margin-right:auto;
 width:85%;
 }
 .carouselWrapper .scroll_text{
+display:none;
 font-family:'nunitosemibold';
 cursor:pointer;
 position:absolute;

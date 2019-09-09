@@ -67,14 +67,14 @@ $(window).scroll(function(e){
 		 onTop=true;
 	}
 });     
-function images(){
+function adjustImages(){
 	var height=$(window).height();
 	var margin=$("#projectThumbs a.project").css("margin-top");
 	var marginInt=parseFloat(margin);
 	height=height-marginInt-5;	
 	$('#projectThumbs .project').height(height*(.5));
 }
-images();
- window.addEventListener("resize", customizeCarousel);
-  window.addEventListener("orientationChange", customizeCarousel);
+adjustImages();
+ window.addEventListener("resize",adjustImages);
+  window.addEventListener("orientationChange", adjustImages);
 });
