@@ -36,10 +36,11 @@ console.log("image loaded");
 
 $(document).ready(function(){
 
+var onTop=true;
 
 $('.bxslider').bxSlider({
 mode:'horizontal',
-speed: 2000,
+speed: 2000
 });
 function customizeCarousel(){
 var halfscreen=(($(window).height())-($('.carouselWrapper').offset().top)-10);
@@ -51,6 +52,28 @@ $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);
   window.addEventListener("resize", customizeCarousel);
   window.addEventListener("orientationChange", customizeCarousel);
 customizeCarousel();
+function fixImages(){
+ var hei=$(window).height()/2;
+ 
+}
+window.addEventListener("resize", fixImages);
+window.addEventListener("orientationChange", fixImages);
+fixImages();
+$(window).scroll(function(e){
+	if(onTop)
+	{
+		console.log("from top");
+		var destination =$('#page').offset().top+50;
+  //jQuery UI needed for animate function
+		$("html,body").animate({scrollTop: destination}, 600);
+		onTop=false;
+	}
+	if($(window).scrollTop() == 0)
+	{
+		 onTop=true;
+	}
+});     
+
 
 
 
