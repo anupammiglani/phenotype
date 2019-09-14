@@ -67,10 +67,19 @@ $(window).scroll(function(e){
 });     
 function adjustImages(){
 	var height=$(window).height();
+	var width=$(window).width();
+	if(width<=1024 && (width/height)<=1){
+		var margin=$("#projectThumbs a.project").css("margin-top");
+		var marginInt=parseFloat(margin);
+		height=height-(2*marginInt)-5;
+		$('#projectThumbs .project').height(height/3);
+	}
+	else{
 	var margin=$("#projectThumbs a.project").css("margin-top");
 	var marginInt=parseFloat(margin);
 	height=height-marginInt-5;	
 	$('#projectThumbs .project').height(height*(.5));
+	}
 }
 adjustImages();
  window.addEventListener("resize",adjustImages);
