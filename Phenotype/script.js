@@ -37,7 +37,6 @@ console.log("image loaded");
 $(document).ready(function(){
 
 var onTop=true;
-
 $('.bxslider').bxSlider({
 mode:'horizontal',
 speed: 2000
@@ -52,7 +51,6 @@ $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);
   window.addEventListener("resize", customizeCarousel);
   window.addEventListener("orientationChange", customizeCarousel);
 customizeCarousel();
-
 $(window).scroll(function(e){
 	if(onTop)
 	{

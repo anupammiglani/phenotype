@@ -21,10 +21,7 @@ console.log("data 2");
 $('.main-nav ul').slideUp(1500);
 }
 });
-$(".scroll_text").on('click',function(){
-var e=$("#projectThumbs").offset().top-30;
-$("html, body").animate({scrollTop:e},1500);
-});
+
 function listControl(){
 
 if($(window).width()>767 && viewType=="mobile"){
