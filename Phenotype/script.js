@@ -42,6 +42,10 @@ mode:'horizontal',
 speed: 2000
 });
 function customizeCarousel(){
+if($(window).width()<=767){	
+var headerHeight=$("#header").outerHeight()+20;
+$('.carouselWrapper').css('margin-top',headerHeight);
+}
 var halfscreen=(($(window).height())-($('.carouselWrapper').offset().top)-10);
 console.log(halfscreen);
 $('.carouselWrapper .bx-viewport').css('height',halfscreen);
@@ -55,7 +59,12 @@ $(window).scroll(function(e){
 	if(onTop)
 	{
 		console.log("from top");
+		if($(window).width()>767){
 		var destination =$('#page').offset().top+48;
+		}
+		else{
+			var destination =$('#page').offset().top+3;
+		}
   //jQuery UI needed for animate function
 		$("html,body").animate({scrollTop: destination}, 600);
 		onTop=false;
@@ -68,11 +77,18 @@ $(window).scroll(function(e){
 function adjustImages(){
 	var height=$(window).height();
 	var width=$(window).width();
-	if(width<=1024 && (width/height)<=1){
+	if(width<=1024 && width>=768 && (width/height)<=1){
 		var margin=$("#projectThumbs a.project").css("margin-top");
 		var marginInt=parseFloat(margin);
 		height=height-(2*marginInt)-5;
 		$('#projectThumbs .project').height(height/3);
+	}
+	else if(width<768){
+		var margin=$("#projectThumbs a.project").css("margin-top");
+		var marginInt=parseFloat(margin);
+		height=height-130-(2*marginInt)-5;
+		$('#projectThumbs .project').height(height/3);
+		
 	}
 	else{
 	var margin=$("#projectThumbs a.project").css("margin-top");

@@ -704,7 +704,7 @@ padding:20px;
 @media screen and (min-width:451px ) and (max-width: 767px) {
 
 #canvas{
-padding:20px 40px 40px 40px;
+padding:20px 20px 40px 20px;
 }
 
 
@@ -728,11 +728,19 @@ padding:20px 55px 55px 55px;
 }
 @media screen and (max-width: 767px) {
 
+#page{
+	padding:130px 0 50px 0;
+	
+}
 #logo .logo a img{
      height:100px;
  }
-
- 
+#projectThumbs .project .project-title{
+		font-size: 12px;
+}
+ .bx-wrapper{
+	 margin-bottom:0;
+ }
 #logo{
 height:100px;
 }
@@ -777,6 +785,13 @@ height:300px;
 }
 .col.sqs-col-4 .sqs-block-content{
 text-align:center;
+}
+#header{
+position: fixed;
+    right: 20px;
+    left: 20px;
+    z-index: 2;
+    background: white;
 }
 }
 .image_wrapper{
