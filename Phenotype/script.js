@@ -43,8 +43,11 @@ speed: 2000
 });
 function customizeCarousel(){
 if($(window).width()<=767){	
-var headerHeight=$("#header").outerHeight()+20;
+var headerHeight=$("#header").outerHeight();
 $('.carouselWrapper').css('margin-top',headerHeight);
+}
+else{
+	$('.carouselWrapper').css('margin-top',0);
 }
 var halfscreen=(($(window).height())-($('.carouselWrapper').offset().top)-10);
 console.log(halfscreen);

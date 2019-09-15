@@ -790,7 +790,8 @@ text-align:center;
 position: fixed;
     right: 20px;
     left: 20px;
-    z-index: 2;
+	top:0;
+    z-index: 10000;
     background: white;
 }
 }
