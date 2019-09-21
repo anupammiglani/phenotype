@@ -696,6 +696,10 @@ display:none;
 padding:20px;
 }
 
+#gallery-thumbs{
+	margin:0;
+	padding:0;
+}
 
 .sqs-block.vsize-1 .sqs-block-content {
     height: 15px;
@@ -818,4 +822,38 @@ transform:translate(-50%,0);
   #projectThumbs .project:nth-child(3n+1){
 	  clear:none;
   }
+}
+
+
+.slideshow
+	{
+	position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+	}
+#page2{
+	width:100%;
+}
+
+#page2 .profile-pic{
+	display:inline-block;
+	float:right;
+	width:30%;
+	
+}
+.text-over{
+	width:60%
+}
+@media screen and (max-width: 767px) {
+#page2 .profile-pic{
+	float:none;
+	display:block;
+	margin:auto;
+	min-height:100px;
+}	
+.text-over{
+	margin-top:10px;
+	width:100%;
+	}	
 }
