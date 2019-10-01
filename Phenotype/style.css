@@ -825,12 +825,30 @@ transform:translate(-50%,0);
 }
 
 
-.slideshow
-	{
+.slideshow {
 	position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+	display: inline-block;
+	}
+	.slidetext{
+		width: 100%;
+		display:inline-block;
+		margin-top:20px;
+	}
+	
+	@media screen and (min-width: 768px) {
+		.slideshow {
+		width:50%;
+		}
+		.slidetext{
+			width:48%;
+			margin-left:1%;
+			vertical-align:top;
+			margin-top:0px;
+		}
+		
 	}
 #page2{
 	width:100%;
