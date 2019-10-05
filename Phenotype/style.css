@@ -141,8 +141,8 @@
 }
 #canvas {
     max-width: 1200px;
-    margin: 10px auto;
-    padding: 20px 75px 75px 75px;
+    margin: 0px auto;
+    padding: 0px 75px 75px 75px;
 	
 }
 body:not(.button-style-default).button-corner-style-square .sqs-editable-button, body:not(.button-style-default).button-corner-style-square .sqs-editable-button-shape {
@@ -206,7 +206,8 @@ body{
     text-decoration: none;
     font-weight: 300;
     font-style: normal;
-color: #575757;
+	color: #575757;
+	margin-top:0;
 }
 .form-wrapper input{
 margin: 0;
@@ -467,7 +468,7 @@ a {
     border-color: rgba(17,17,17,.2);
 }
 #header {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 body h3 {
@@ -655,13 +656,13 @@ width:100%;
 display:block;
 }
 #logo .logo a img{
-height:150px;
+height:100px;
 } 
 #logo{
-height:150px;
+height:100px;
 }
 #header #topNav{
-margin-top:45px;
+margin-top:0x;
 }
 
 #header .menuicon{
@@ -678,7 +679,7 @@ position:relative;
 position:relative;
 margin-left:auto;
 margin-right:auto;
-width:85%;
+max-width:90%;
 }
 
 
@@ -693,7 +694,7 @@ display:none;
 @media screen and (max-width: 450px) {
 
 #canvas{
-padding:20px;
+padding:0px 20px 20px 20px;
 }
 
 #gallery-thumbs{
@@ -708,7 +709,7 @@ padding:20px;
 @media screen and (min-width:451px ) and (max-width: 767px) {
 
 #canvas{
-padding:20px 20px 40px 20px;
+padding:0px 20px 40px 20px;
 }
 
 
@@ -721,7 +722,7 @@ padding:20px 20px 40px 20px;
 @media screen and (min-width:768px ) and (max-width: 992px) {
 
 #canvas{
-padding:20px 55px 55px 55px;
+padding:0px 55px 55px 55px;
 }
 
 
@@ -847,6 +848,10 @@ transform:translate(-50%,0);
 			margin-left:1%;
 			vertical-align:top;
 			margin-top:0px;
+		}
+		#logo{
+			position: relative;
+			right: 30px;
 		}
 		
 	}
