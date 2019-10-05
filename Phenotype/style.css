@@ -883,6 +883,9 @@ transform:translate(-50%,0);
 .text-over{
 	width:65%
 }
+#gallery-thumbs .thumb-item{
+	background:black;
+}
 @media screen and (max-width: 767px) {
 #page2 .profile-pic{
 	float:none;
