@@ -847,13 +847,16 @@ transform:translate(-50%,0);
 			width:48%;
 			margin-left:1%;
 			vertical-align:top;
-			margin-top:0px;
+			margin-top:-6px;
 		}
 		#logo{
 			position: relative;
 			right: 30px;
 		}
-		.carouselWrapper .bx-wrapper .bx-next{
+		 .slidetext p{
+			 padding-left: 32px;
+		 }
+		.carouselWrapper .bx-wrapper .bx-next, .mainSlider .bx-wrapper .bx-next{
 				right: -40px;
 				background: url("./images/slider/arrow3.png") no-repeat;
 				background-size: contain;
@@ -861,7 +864,7 @@ transform:translate(-50%,0);
 				-ms-transform: rotate(180deg);
 				transform: rotate(180deg)
 		}
-		.bx-wrapper .bx-prev {
+		.carouselWrapper .bx-wrapper .bx-prev,.mainSlider .bx-wrapper .bx-prev {
 			left: -40px;
             background: url("./images/slider/arrow3.png") no-repeat;
 			background-size: contain;
@@ -895,6 +898,7 @@ transform:translate(-50%,0);
 .mainSlider{
 	display:inline-block;
 	width:100%;
+	cursor: pointer;
 	
 }
 
@@ -913,7 +917,7 @@ ul#gallery-thumbs{
 }
 
 .gallery-thumbs-container .bx-wrapper img{
-	width:90%;
+	width:100%;
 }
 .title-content{
 	width:100%;
@@ -930,6 +934,9 @@ ul#gallery-thumbs{
 	box-sizing:border-box;
 }
 
+#gallery-thumbs li.thumb-item:last-child{
+	margin-right:0;
+}
 #page3 .title-blog{
 	margin-top:5px;
 	width:100%;
@@ -940,4 +947,11 @@ h6.date{
 }
 h5.title{
 	margin-bottom:0px;
+}
+
+#gallery-thumbs .thumb{
+	opacity: .4;
+}
+#gallery-thumbs .thumb.pager-active{
+	opacity: 1;
 }

@@ -89,6 +89,13 @@ $(document).ready(function(){
 
 
 function customizeCarousel(){
+if($(window).width()<=767){	
+var headerHeight=$("#header").outerHeight();
+$('.slideshow').css('margin-top',headerHeight);
+}
+else{
+	$('.slideshow').css('margin-top',0);
+}
 var halfscreen=(($(window).height())-($('.slideshow').offset().top)-20);
 console.log(halfscreen);
 $('.slideshow').css('height',halfscreen);
