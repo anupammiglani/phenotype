@@ -853,7 +853,19 @@ transform:translate(-50%,0);
 			position: relative;
 			right: 30px;
 		}
-		
+		.carouselWrapper .bx-wrapper .bx-next{
+				right: -40px;
+				background: url("./images/slider/arrow3.png") no-repeat;
+				background-size: contain;
+				-webkit-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg)
+		}
+		.bx-wrapper .bx-prev {
+			left: -40px;
+            background: url("./images/slider/arrow3.png") no-repeat;
+			background-size: contain;
+		}
 	}
 #page2{
 	width:100%;
