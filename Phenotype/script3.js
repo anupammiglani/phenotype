@@ -115,7 +115,7 @@ function callBack(){
             changeImage(1);
         }
 	}
-$(".mainSlider .bxslider li img,.gallery-thumbs-container #gallery-thumbs li img").on("click",function(e){
+$(".mainSlider .bxslider li img").on("click",function(e){
 	var imgPath= $(e.target).attr("src");
 	$("#myModal  .modal-image").attr("src",imgPath);
 	$("#myModal").show();

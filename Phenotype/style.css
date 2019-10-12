@@ -428,7 +428,8 @@ button, input, select, textarea {
    
 }
 #footer {
-    margin-top: 50px;
+    padding-top: 50px;
+	border-top: 0.5px solid black; 
 }
 #footerBlock {
     min-height: 34px;
@@ -857,7 +858,7 @@ transform:translate(-50%,0);
 			 padding-left: 32px;
 		 }
 		.carouselWrapper .bx-wrapper .bx-next, .mainSlider .bx-wrapper .bx-next{
-				right: -40px;
+				right: -25px;
 				background: url("./images/slider/arrow3.png") no-repeat;
 				background-size: contain;
 				-webkit-transform: rotate(180deg);
@@ -865,7 +866,7 @@ transform:translate(-50%,0);
 				transform: rotate(180deg)
 		}
 		.carouselWrapper .bx-wrapper .bx-prev,.mainSlider .bx-wrapper .bx-prev {
-			left: -40px;
+			left: -25px;
             background: url("./images/slider/arrow3.png") no-repeat;
 			background-size: contain;
 		}
@@ -881,7 +882,9 @@ transform:translate(-50%,0);
 	
 }
 .text-over{
-	width:65%
+	width:65%;
+	display: inline-block;
+    margin-top: -6px;
 }
 #gallery-thumbs .thumb-item{
 	background:black;
@@ -892,9 +895,13 @@ transform:translate(-50%,0);
 	display:block;
 	margin:auto;
 	min-height:100px;
+	width: 80%;
+}
+.sqs-block.spacer-block.sqs-block-spacer.sized.vsize-1{
+	display:none;
 }	
 .text-over{
-	margin-top:10px;
+	margin-top:15px;
 	width:100%;
 	}	
 }
