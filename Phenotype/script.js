@@ -87,12 +87,71 @@ function adjustImages(){
 		var marginInt=parseFloat(margin);
 		height=height-(2*marginInt)-5;
 		$('#projectThumbs .project').height(height/3);
+		var projectHeight=$("#projectThumbs a.project").outerHeight();
+		var projectWidth=$("#projectThumbs a.project").outerWidth();
+		var projectImageHeight=$("#projectThumbs a.project img").outerHeight();
+		if(projectWidth<projectImageHeight){
+				//$("#projectThumbs a.project img").outerHeight(projectWidth);
+				var position=projectHeight-projectWidth;
+				if(position>=19){
+				$(".content-fill").css("bottom",position);
+				var bottomText=(position-19)/2;
+				$(".image_wrapper .project-title").css("bottom",bottomText);
+				}
+			else{
+				$(".content-fill").css("bottom",30);
+				$(".image_wrapper .project-title").css("bottom",0);
+			}	
+		}else{
+			$(".content-fill").css("bottom",30);
+				$(".image_wrapper .project-title").css("bottom",0);
+			
+		}
 	}
-	else if(width<768){
+	else if(width<=1024 && width>=768 && (width/height)>1){
+	var margin=$("#projectThumbs a.project").css("margin-top");
+	var marginInt=parseFloat(margin);
+	height=height-(marginInt)-5;
+	$('#projectThumbs .project').height(height*(.5));
+	$(".content-fill").css("bottom",30);
+	$(".image_wrapper .project-title").css("bottom",0);
+}
+	
+	else if(width<768 && (width/height)<=1){
 		var margin=$("#projectThumbs a.project").css("margin-top");
 		var marginInt=parseFloat(margin);
 		height=height-130-(2*marginInt)-5;
 		$('#projectThumbs .project').height(height/3);
+		var projectHeight=$("#projectThumbs a.project").outerHeight();
+		var projectWidth=$("#projectThumbs a.project").outerWidth();
+		var projectImageHeight=$("#projectThumbs a.project img").outerHeight();
+		if(projectWidth<projectImageHeight){
+				//$("#projectThumbs a.project img").outerHeight(projectWidth);
+				var position=projectHeight-projectWidth;
+				if(position>=19){
+				$(".content-fill").css("bottom",position);
+				var bottomText=(position-19)/2;
+				$(".image_wrapper .project-title").css("bottom",bottomText);
+				}
+			else{
+				$(".content-fill").css("bottom",30);
+				$(".image_wrapper .project-title").css("bottom",0);
+			}	
+		}else{
+			$(".content-fill").css("bottom",30);
+				$(".image_wrapper .project-title").css("bottom",0);
+			
+		}
+		
+		
+	}
+	else if(width<768 && (width/height)> 1){
+		var margin=$("#projectThumbs a.project").css("margin-top");
+		var marginInt=parseFloat(margin);
+		height=height-130-(marginInt)-5;
+		$('#projectThumbs .project').height(height*(.5));
+		$(".content-fill").css("bottom",30);
+		$(".image_wrapper .project-title").css("bottom",0);
 		
 	}
 	else{
@@ -100,6 +159,8 @@ function adjustImages(){
 	var marginInt=parseFloat(margin);
 	height=height-marginInt-5;	
 	$('#projectThumbs .project').height(height*(.5));
+	$(".content-fill").css("bottom",30);
+	$(".image_wrapper .project-title").css("bottom",0);
 	}
 }
 window.addEventListener("resize",adjustImages);

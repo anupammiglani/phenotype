@@ -248,7 +248,7 @@ padding:0;
 {
 float: left;
     position: relative;
-    margin-right: 30px;
+    margin-right: 27px;
 }
 #topNav nav li a {
     padding: 17px 0;
@@ -1020,5 +1020,8 @@ h5.title{
 	margin-top: 15px;
 	padding-left:0px;
 	box-sizing:border-box;
+}
+#projectThumbs .project .project-image .hover-text{
+	font-size: 14px;
 }
 }
