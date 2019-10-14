@@ -428,8 +428,8 @@ button, input, select, textarea {
    
 }
 #footer {
-    padding-top: 50px;
-	border-top: 0.5px solid black; 
+    margin-top: 50px;
+	border-top: 0.5px solid rgb(87,87,87); 
 }
 #footerBlock {
     min-height: 34px;
@@ -601,10 +601,10 @@ width:100%;
 }
 img[data-src] {
     opacity: 1;
-    -webkit-transition: opacity .3s ease-out;
-    -moz-transition: opacity .3s ease-out;
-    -o-transition: opacity .3s ease-out;
-    transition: opacity .3s ease-out;
+    -webkit-transition: opacity .03s ease-out;
+    -moz-transition: opacity .03s ease-out;
+    -o-transition: opacity .03s ease-out;
+    transition: opacity .03s ease-out;
 }
 
 img {

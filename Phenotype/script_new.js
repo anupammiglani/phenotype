@@ -57,7 +57,7 @@ $('.carouselWrapper .bx-viewport').css('height',halfscreen);
 $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);
 $('.carouselWrapper').css('width',halfscreen/(.668));
 
-initSlider.reloadSlider();
+setTimeout(function(){initSlider.reloadSlider()},100);
 }
  
   window.addEventListener("resize", customizeCarousel);
