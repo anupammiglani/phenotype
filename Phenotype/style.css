@@ -612,7 +612,9 @@ img {
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
 }
-
+#canvas.project-canvas{
+	max-width:1280px;
+}
 #projectThumbs .project .project-image .hover-text{
 
 font-family: 'nunitoregular';
@@ -842,10 +844,10 @@ transform:translate(-50%,0);
 	
 	@media screen and (min-width: 768px) {
 		.slideshow {
-		width:50%;
+		width:70%;
 		}
 		.slidetext{
-			width:48%;
+			width:28%;
 			margin-left:1%;
 			vertical-align:top;
 			margin-top:-6px;

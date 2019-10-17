@@ -68,7 +68,7 @@ $(document).ready(function(){
         //displaySlideQty: visibleThumbs,
         //moveSlideQty: visibleThumbs,
         infiniteLoop: false,
-        slideWidth: 100,
+        slideWidth: 140,
         minSlides: visibleThumbs,
         maxSlides: visibleThumbs,
         slideMargin: 10
