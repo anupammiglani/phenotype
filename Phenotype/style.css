@@ -697,7 +697,7 @@ display:none;
 @media screen and (max-width: 450px) {
 
 #canvas{
-padding:0px 20px 20px 20px;
+padding:0px 0px 20px 0px;
 }
 
 #gallery-thumbs{
@@ -712,7 +712,7 @@ padding:0px 20px 20px 20px;
 @media screen and (min-width:451px ) and (max-width: 767px) {
 
 #canvas{
-padding:0px 20px 40px 20px;
+padding:0px 0px 40px 0px;
 }
 
 
@@ -737,7 +737,7 @@ padding:0px 55px 55px 55px;
 @media screen and (max-width: 767px) {
 
 #page{
-	padding:130px 0 50px 0;
+	padding:50px 0 50px 0;
 	
 }
 #logo .logo a img{
@@ -796,8 +796,8 @@ text-align:center;
 }
 #header{
 position: fixed;
-    right: 20px;
-    left: 20px;
+    right: 0px;
+    left: 0px;
 	top:0;
     z-index: 10000;
     background: white;
@@ -1026,4 +1026,16 @@ h5.title{
 #projectThumbs .project .project-image .hover-text{
 	font-size: 14px;
 }
+}
+
+@media screen and (max-width: 767px){
+	
+	.carouselWrapper{
+		width:100%;
+		max-width:100%;
+	}
+	#header{
+		padding-left:16px;
+		padding-right:16px;
+	}
 }

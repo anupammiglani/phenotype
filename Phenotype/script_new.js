@@ -46,16 +46,22 @@ pause: 5000
 function customizeCarousel(){
 if($(window).width()<=767){	
 var headerHeight=$("#header").outerHeight();
-$('.carouselWrapper').css('margin-top',headerHeight);
+$('.carouselWrapper').css('margin-top',headerHeight+10);
 }
 else{
 	$('.carouselWrapper').css('margin-top',0);
 }
 var halfscreen=(($(window).height())-($('.carouselWrapper').offset().top)-10);
 console.log(halfscreen);
+if($(window).width()>767){
 $('.carouselWrapper .bx-viewport').css('height',halfscreen);
 $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);
 $('.carouselWrapper').css('width',halfscreen/(.668));
+}
+else{
+$('.carouselWrapper .bx-viewport').css('height',halfscreen/2);
+$('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen/2);
+}
 
 setTimeout(function(){initSlider.reloadSlider()},100);
 }
@@ -63,15 +69,16 @@ setTimeout(function(){initSlider.reloadSlider()},100);
   window.addEventListener("resize", customizeCarousel);
   window.addEventListener("orientationChange", customizeCarousel);
 $(window).scroll(function(e){
+	if($(window).width()>767){
 	if(onTop)
 	{
 		console.log("from top");
-		if($(window).width()>767){
+		
 		var destination =$('#page').offset().top+48;
-		}
-		else{
+		
+		/*else{
 			var destination =$('#page').offset().top+3;
-		}
+		}*/
   //jQuery UI needed for animate function
 		$("html,body").animate({scrollTop: destination}, 600);
 		onTop=false;
@@ -79,6 +86,7 @@ $(window).scroll(function(e){
 	if($(window).scrollTop() == 0)
 	{
 		 onTop=true;
+	}
 	}
 });     
 function adjustImages(){
@@ -93,8 +101,9 @@ function adjustImages(){
 	else if(width<768){
 		var margin=$("#projectThumbs a.project").css("margin-top");
 		var marginInt=parseFloat(margin);
-		height=height-130-(2*marginInt)-5;
-		$('#projectThumbs .project').height(height/3);
+		var carouselBottom=$('.carouselWrapper').offset().top+parseFloat($('.carouselWrapper .bx-viewport').css("height"));
+		height=height-(carouselBottom)-(marginInt)-55;
+		$('#projectThumbs .project').height(height/2);
 		
 	}
 	else{
