@@ -59,8 +59,8 @@ $('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen);
 $('.carouselWrapper').css('width',halfscreen/(.668));
 }
 else{
-$('.carouselWrapper .bx-viewport').css('height',halfscreen/2);
-$('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen/2);
+$('.carouselWrapper .bx-viewport').css('height',halfscreen/2.7);
+$('.carouselWrapper .bx-viewport .bxslider img').height(halfscreen/2.7);
 }
 
 setTimeout(function(){initSlider.reloadSlider()},100);
