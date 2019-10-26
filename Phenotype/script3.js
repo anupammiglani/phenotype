@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).on("DOMContentLoaded",function(){
 //SET THESE VARS
  if ($('.bxslider img').length > 0) {
     
