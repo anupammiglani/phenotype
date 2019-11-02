@@ -868,10 +868,10 @@ transform:translate(-50%,0);
 	
 	@media screen and (min-width: 768px) {
 		.slideshow {
-		width:70%;
+		width:60%;
 		}
 		.slidetext{
-			width:28%;
+			width:38%;
 			margin-left:1%;
 			vertical-align:top;
 			margin-top:-6px;
@@ -884,7 +884,7 @@ transform:translate(-50%,0);
 			 padding-left: 32px;
 		 }
 		.carouselWrapper .bx-wrapper .bx-next, .mainSlider .bx-wrapper .bx-next{
-				right: -25px;
+				right: -20px;
 				background: url("./images/slider/arrow3.png") no-repeat;
 				background-size: contain;
 				-webkit-transform: rotate(180deg);
@@ -892,7 +892,7 @@ transform:translate(-50%,0);
 				transform: rotate(180deg)
 		}
 		.carouselWrapper .bx-wrapper .bx-prev,.mainSlider .bx-wrapper .bx-prev {
-			left: -25px;
+			left: -20px;
             background: url("./images/slider/arrow3.png") no-repeat;
 			background-size: contain;
 		}
