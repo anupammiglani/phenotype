@@ -63,12 +63,18 @@
   </ul>
  
 </div>
+<div class="tab">
+  
+  <button class="tablinks" onclick="openCity(event, 'hotel')">Hotel</button>
+  <button class="tablinks" onclick="openCity(event, 'architect')">Architect</button>
+</div>
 <section id="page">
+
+
 <div id="projectThumbs">
   <div class="wrapper">
-    
-      
-        <a class="project" href="./madison.html">
+ <div class="projectType" data-type="hotel">   
+ <a class="project" href="./madison.html" data-type="restraunt">
           <div class="image_wrapper">
             <div class="project-image">
 <div class="intrinsic">
@@ -135,7 +141,8 @@
             <div class="project-title">Civil Lines</div>
           </div>
         </a>
-      
+       </div>
+	   <div class="projectType" data-type="architect">  
         <a class="project" href="./purab-paschim.html">
           <div class="image_wrapper">
             <div class="project-image">
@@ -152,7 +159,8 @@
             <div class="project-title">Purab Pashchim</div>
           </div>
         </a>
-      
+     
+	  
         <a class="project" href="./glitch.html">
           <div class="image_wrapper">
             <div class="project-image">
@@ -169,6 +177,7 @@
             <div class="project-title">Glitch</div>
           </div>
         </a>
+		</div>
 		 </div>
 </div>
 </section>

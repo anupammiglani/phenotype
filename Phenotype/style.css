@@ -139,6 +139,32 @@
     font-style: normal;
 
 }
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
 #canvas {
     max-width: 1200px;
     margin: 0px auto;
@@ -582,9 +608,7 @@ h1 {
 }
 #projectThumbs .project .project-image .intrinsic {
     opacity: 1;
-    -webkit-transition: opacity .14s ease-in-out;
-    transition: opacity .14s ease-in-out;
--moz-transition: opacity .3s ease-in-out
+    
 }
 #projectThumbs .project .project-item-count {
     display: none;
@@ -625,10 +649,7 @@ width:100%;
 }
 img[data-src] {
     opacity: 1;
-    -webkit-transition: opacity .03s ease-out;
-    -moz-transition: opacity .03s ease-out;
-    -o-transition: opacity .03s ease-out;
-    transition: opacity .03s ease-out;
+    
 }
 
 img {

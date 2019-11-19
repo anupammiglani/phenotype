@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+
  
   function lazyload() {
  
@@ -35,7 +36,6 @@ console.log("image loaded");
 });
 
 $(document).ready(function(){
-
 var onTop=true;
  var initSlider=$('.bxslider').bxSlider({
 mode:'horizontal',
@@ -119,5 +119,19 @@ function adjustImages(){
  setTimeout(function(){
 	 customizeCarousel();
 		adjustImages();
- },100);
+ });
 });
+function openCity(evt, type){
+	var scroll=$(".projectType[data-type='"+type+"'] .image_wrapper:first-child").offset().top;
+var tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+  }	
+  if($(window).width()<768){
+	  scroll=scroll-$("#header").outerHeight()+5;
+  }
+  evt.currentTarget.className += " active";
+   $('html, body').animate({
+        scrollTop: scroll
+    }, 100);
+}
