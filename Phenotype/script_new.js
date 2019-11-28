@@ -37,7 +37,7 @@ console.log("image loaded");
 
 $(document).ready(function(){
 var onTop=true;
- var initSlider=$('.bxslider').bxSlider({
+var initSlider=$('.bxslider').bxSlider({
 mode:'horizontal',
 auto: true,
 speed: 1000,
@@ -74,7 +74,7 @@ $(window).scroll(function(e){
 	{
 		console.log("from top");
 		
-		var destination =$('#page').offset().top+48;
+		var destination =$('.tab').offset().top+25;
 		
 		/*else{
 			var destination =$('#page').offset().top+3;
@@ -94,22 +94,24 @@ function adjustImages(){
 	var width=$(window).width();
 	if(width<=1024 && width>=768 && (width/height)<=1){
 		var margin=$("#projectThumbs a.project").css("margin-top");
+		var tabHeight=$(".tab").height();
 		var marginInt=parseFloat(margin);
-		height=height-(2*marginInt)-5;
+		height=height-(3*marginInt)-5-tabHeight;
 		$('#projectThumbs .project').height(height/3);
 	}
 	else if(width<768){
 		var margin=$("#projectThumbs a.project").css("margin-top");
+		var tabHeight=$(".tab").height();
 		var marginInt=parseFloat(margin);
 		var carouselBottom=$('.carouselWrapper').offset().top+parseFloat($('.carouselWrapper .bx-viewport').css("height"));
-		height=height-(carouselBottom)-(marginInt)-55;
+		height=height-(carouselBottom)-(2*marginInt)-50-tabHeight;
 		$('#projectThumbs .project').height(height/2);
 		
 	}
-	else{
-	var margin=$("#projectThumbs a.project").css("margin-top");
+	else{var margin=$("#projectThumbs a.project").css("margin-top");
 	var marginInt=parseFloat(margin);
-	height=height-marginInt-5;	
+	var tabHeight=$(".tab").height();
+	height=height-(2*marginInt)-5-tabHeight;	
 	$('#projectThumbs .project').height(height*(.5));
 	}
 }
@@ -134,4 +136,4 @@ var tablinks = document.getElementsByClassName("tablinks");
    $('html, body').animate({
         scrollTop: scroll
     }, 100);
-}
+} 

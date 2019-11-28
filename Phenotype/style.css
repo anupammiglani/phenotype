@@ -142,27 +142,39 @@
 
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  width: 100%;
+  text-align:center;
 }
 
 
 
-.tab button {
+.tab span {
   background-color: inherit;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  width:16.6%;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 16px;
 }
-.tab button:hover {
+
+@media screen and (min-width: 768px)and (max-width: 1024px){
+	.tab span {
+	font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.tab span {
+	font-size: 7px;
+	}
+}
+.tab span:hover {
   background-color: #ddd;
 }
 
-.tab button.active {
+.tab span.active {
   background-color: #ccc;
 }
 #canvas {
