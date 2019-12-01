@@ -143,32 +143,49 @@
 .tab {
   overflow: hidden;
   width: 100%;
-  text-align:center;
+   display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-pack: justify;
+ -ms-flex-pack: justify;
+ justify-content: space-between;
+  
 }
 
 
 
 .tab span {
   background-color: inherit;
-  float: left;
+  display:inline-block;
   border: none;
   outline: none;
   cursor: pointer;
-  width:16.6%;
+  padding-left: 10px;
+  padding-right: 10px;
   transition: 0.3s;
   font-size: 16px;
+  border-radius: 25px;
+ 
 }
-
+ 
 @media screen and (min-width: 768px)and (max-width: 1024px){
 	.tab span {
-	font-size: 12px;
+	font-size: 11px;
+	 border-radius: 16px;
+	 padding-left: 7px;
+    padding-right: 7px;
 	}
+	
 }
 
 @media screen and (max-width: 767px){
 	.tab span {
 	font-size: 7px;
+	 border-radius: 10px;
+	padding-left: 4px;
+    padding-right: 4px; 
 	}
+	
 }
 .tab span:hover {
   background-color: #ddd;
@@ -245,7 +262,10 @@ body{
     font-weight: 300;
     font-style: normal;
 	color: #575757;
+	margin-left:10px;
+	margin-right:10px;
 	margin-top:0;
+	
 }
 .form-wrapper input{
 margin: 0;
@@ -313,7 +333,7 @@ float: left;
     margin-right: 27px;
 }
 #topNav nav li a {
-    padding: 17px 0;
+    padding: 47px 0;
 }
 #topNav a{
 text-transform: uppercase;
@@ -897,9 +917,9 @@ transform:translate(-50%,0);
 		width: 100%;
 		display:inline-block;
 		margin-top:20px;
+		text-align:justify;
 	}
-	
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 1025px) {
 		.slideshow {
 		width:60%;
 		}
@@ -909,13 +929,18 @@ transform:translate(-50%,0);
 			vertical-align:top;
 			margin-top:-6px;
 		}
+		
+		.slidetext p{
+			 padding-left: 32px;
+		 }
+	}
+	@media screen and (min-width: 768px) {
+		
 		#logo{
 			position: relative;
 			right: 30px;
 		}
-		 .slidetext p{
-			 padding-left: 32px;
-		 }
+		 
 		.carouselWrapper .bx-wrapper .bx-next, .mainSlider .bx-wrapper .bx-next{
 				right: -20px;
 				background: url("./images/slider/arrow3.png") no-repeat;
@@ -1098,4 +1123,14 @@ h5.title{
 		padding-left:16px;
 		padding-right:16px;
 	}
+}
+
+.projectLink{
+	position:relative;
+	margin-top:10px;
+}
+.projectLink .rightLink{
+display: inline-block;
+    position: absolute;
+    right: 0;
 }

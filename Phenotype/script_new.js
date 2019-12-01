@@ -124,7 +124,7 @@ function adjustImages(){
  });
 });
 function openCity(evt, type){
-	var scroll=$(".projectType[data-type='"+type+"'] .image_wrapper:first-child").offset().top;
+	var scroll=$(".typeFinder[data-type='"+type+"'] .image_wrapper:first-child").offset().top;
 var tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace("active", "");
