@@ -33,6 +33,33 @@ if(lazyloadImages.length == 0) {
 
 });
 
+function adjustImages(){
+	var height=$(window).height();
+	var width=$(window).width();
+	if(width<=1024 && width>=768 && (width/height)<=1){
+		var margin=$("#projectThumbs a.project").css("margin-top");
+		var tabHeight=$(".tab").height();
+		var marginInt=parseFloat(margin);
+		height=height-(3*marginInt)-5-tabHeight;
+		$('#projectThumbs .project').height(height/3);
+	}
+	else if(width<768){
+		var margin=$("#projectThumbs a.project").css("margin-top");
+		var tabHeight=$(".tab").height();
+		var marginInt=parseFloat(margin);
+		var carouselBottom=$('.carouselWrapper').offset().top+parseFloat($('.carouselWrapper .bx-viewport').css("height"));
+		console.log("1-> "+$('.carouselWrapper').offset().top+ " ---> "+parseFloat($('.carouselWrapper .bx-viewport').css("height")));
+		height=height-(carouselBottom)-(2*marginInt)-50-tabHeight;
+		$('#projectThumbs .project').height(height/2);
+		
+	}
+	else{var margin=$("#projectThumbs a.project").css("margin-top");
+	var marginInt=parseFloat(margin);
+	var tabHeight=$(".tab").height();
+	height=height-(2*marginInt)-5-tabHeight;	
+	$('#projectThumbs .project').height(height*(.5));
+	}
+}
 $(document).ready(function(){
 var onTop=true;
 $(window).scroll(function(e){
@@ -59,36 +86,10 @@ $(window).scroll(function(e){
 	
 	}
 });     
-function adjustImages(){
-	var height=$(window).height();
-	var width=$(window).width();
-	if(width<=1024 && width>=768 && (width/height)<=1){
-		var margin=$("#projectThumbs a.project").css("margin-top");
-		var tabHeight=$(".tab").height();
-		var marginInt=parseFloat(margin);
-		height=height-(3*marginInt)-5-tabHeight;
-		$('#projectThumbs .project').height(height/3);
-	}
-	else if(width<768){
-		var margin=$("#projectThumbs a.project").css("margin-top");
-		var tabHeight=$(".tab").height();
-		var marginInt=parseFloat(margin);
-		var carouselBottom=$('.carouselWrapper').offset().top+parseFloat($('.carouselWrapper .bx-viewport').css("height"));
-		height=height-(carouselBottom)-(2*marginInt)-50-tabHeight;
-		$('#projectThumbs .project').height(height/2);
-		
-	}
-	else{var margin=$("#projectThumbs a.project").css("margin-top");
-	var marginInt=parseFloat(margin);
-	var tabHeight=$(".tab").height();
-	height=height-(2*marginInt)-5-tabHeight;	
-	$('#projectThumbs .project').height(height*(.5));
-	}
-}
+
 
  window.addEventListener("resize",adjustImages);
  window.addEventListener("orientationChange",adjustImages);
- adjustImages();
  
 });
 
@@ -123,6 +124,7 @@ setTimeout(function(){initSlider.reloadSlider()},100);
 window.addEventListener("resize",customizeCarousel);
 window.addEventListener("orientationChange",customizeCarousel);
 customizeCarousel();
+adjustImages();
 });
 
 function openCity(evt, type){
