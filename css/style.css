@@ -197,7 +197,7 @@
 #canvas {
     max-width: 1200px;
     margin: 0px auto;
-    padding: 0px 75px 75px 75px;
+    padding: 20px 75px 75px 75px;
 	
 }
 body:not(.button-style-default).button-corner-style-square .sqs-editable-button, body:not(.button-style-default).button-corner-style-square .sqs-editable-button-shape {
@@ -943,7 +943,7 @@ transform:translate(-50%,0);
 		 
 		.carouselWrapper .bx-wrapper .bx-next, .mainSlider .bx-wrapper .bx-next{
 				right: -20px;
-				background: url("./images/slider/arrow3.png") no-repeat;
+				background: url("../images/slider/arrow3.png") no-repeat;
 				background-size: contain;
 				-webkit-transform: rotate(180deg);
 				-ms-transform: rotate(180deg);
@@ -951,7 +951,7 @@ transform:translate(-50%,0);
 		}
 		.carouselWrapper .bx-wrapper .bx-prev,.mainSlider .bx-wrapper .bx-prev {
 			left: -20px;
-            background: url("./images/slider/arrow3.png") no-repeat;
+            background: url("../images/slider/arrow3.png") no-repeat;
 			background-size: contain;
 		}
 	}
