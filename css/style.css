@@ -1000,9 +1000,10 @@ ul#gallery-thumbs{
 }
 .title-content{
 	width:100%;
+	text-align: center;
 }
 .title-content img.blog-image{
-	float:left;
+	
 	width:50%;
 	min-height:150px;
 }
@@ -1012,6 +1013,7 @@ ul#gallery-thumbs{
 	margin-top: -6px;
 	padding-left:15px;
 	box-sizing:border-box;
+	display:none;
 }
 
 #gallery-thumbs li.thumb-item:last-child{
