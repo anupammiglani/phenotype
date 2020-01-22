@@ -164,13 +164,15 @@
   padding-right: 10px;
   transition: 0.3s;
   font-size: 16px;
+  font-weight: 800;
   border-radius: 25px;
  
 }
  
 @media screen and (min-width: 768px)and (max-width: 1024px){
 	.tab span {
-	font-size: 11px;
+	font-size: 14px;
+	font-weight: 800;
 	 border-radius: 16px;
 	 padding-left: 7px;
     padding-right: 7px;
@@ -180,7 +182,8 @@
 
 @media screen and (max-width: 767px){
 	.tab span {
-	font-size: 7px;
+	font-size: 10px;
+	font-weight: 800;
 	 border-radius: 10px;
 	padding-left: 4px;
     padding-right: 4px; 
@@ -932,6 +935,7 @@ transform:translate(-50%,0);
 		
 		.slidetext p{
 			 padding-left: 32px;
+			 margin-top:9px;
 		 }
 	}
 	@media screen and (min-width: 768px) {
