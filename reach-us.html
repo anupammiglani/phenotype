@@ -37,7 +37,7 @@
 <section id="page">
 <div class="sqs-layout">
 <div class="sqs-row">
-<div class="col sqs-col-8">
+<div class="col sqs-col-8" style="display:none">
 <div class="sqs-block sqs-block-html">
 <div class="sqs-block-content"><h1 style="white-space:pre-wrap;">Contact Us</h1></div>
 <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1"><div class="sqs-block-content" style="height:1px">&nbsp;</div></div>
@@ -97,7 +97,7 @@
 </div>
 </div>
 <div class="sqs-block html-block sqs-block-html">
-<div class="sqs-block-content" id="map"  style="height:375px;width:100%;">
+<div class="sqs-block-content" id="map"  style="height:375px;width:100%;display:none">
 </div>
 </div>
 </div>
@@ -124,25 +124,5 @@
 <img class="loader_img" src="./images/Phenotype_1.gif" />
 </div>       
 </body>
- <script>
-
-      function initMap() {
-        var myLatLng = {lat: 28.480555, lng: 77.191582};
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: myLatLng,
-
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-    </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAom4uJEkyzU8sPqf7EPYiSrKogDvbmZ2w&callback=initMap"
-    async defer></script>
-</html>
+ </html>
 
