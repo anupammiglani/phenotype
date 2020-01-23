@@ -13,4 +13,18 @@ window.addEventListener("resize",setContent);
   window.addEventListener("orientationChange",setContent);
   
   setTimeout(function(){ setContent()},100);
+  
+  $('#myModal .close').on('click',function(){
+	  $('#myModal').hide();
+  })
+  
 });
+
+function openImage(event){
+	
+		
+			var nextImagePath=$(event.currentTarget).data("model-image");
+			$("#myModal .modal-image").attr("src",nextImagePath);
+			$('#myModal').show();
+	
+}
