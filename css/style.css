@@ -900,12 +900,13 @@ transform:translate(-50%,0);
   #projectThumbs .project{
 	  width: 46.920711974110034%
   }
-  #projectThumbs .project:nth-child(2n+1){
-	  clear:left;
-  }
   #projectThumbs .project:nth-child(3n+1){
 	  clear:none;
   }
+  #projectThumbs .project:nth-child(2n+1){
+	  clear:left;
+  }
+  
 }
 
 
